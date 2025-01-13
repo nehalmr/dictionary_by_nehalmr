@@ -5,7 +5,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/nehalmr/dictionary_by_nehalmr.svg)](https://github.com/nehalmr/dictionary_by_nehalmr/issues)
 
 ## Overview
-The **Dictionary by Nehalmr** is a Python-based project that allows users to find meanings, synonyms, and antonyms of words interactively. This lightweight application is ideal for students, professionals, or anyone looking to quickly understand the nuances of words.
+The **Dictionary by Nehalmr** is a Flutter-based project that allows users to find meanings, synonyms, and antonyms of words interactively. This lightweight application is ideal for students, professionals, or anyone looking to quickly understand the nuances of words.
 
 ## Features
 - **Word Definitions**: Provides precise meanings of words.
@@ -23,10 +23,10 @@ The **Dictionary by Nehalmr** is a Python-based project that allows users to fin
 
 2. **Install Dependencies**
 
-   Ensure you have Python 3.x installed. Install the required dependencies using pip:
+   Ensure you have Flutter SDK installed. Configure dependencies from pubspec.yaml using:
 
    ```bash
-   pip install -r requirements.txt
+   flutter pub get
    ```
 
 ## Usage
@@ -34,7 +34,7 @@ The **Dictionary by Nehalmr** is a Python-based project that allows users to fin
 1. Run the application:
 
    ```bash
-   python app.py
+   flutter run
    ```
 
 2. Follow the prompts to:
