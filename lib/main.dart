@@ -104,6 +104,10 @@ class DictionaryHome extends StatelessWidget {
                           onPressed: () => _launchURL('https://www.linkedin.com/in/nehalmr/'),
                           child: Text('https://www.linkedin.com/in/nehalmr/'),
                         ),
+                        TextButton(
+                          onPressed: () => _launchURL('https://github.com/nehalmr/dictionary_by_nehalmr'),
+                          child: Text('https://github.com/nehalmr/dictionary_by_nehalmr'),
+                        ),
                       ],
                     ),
                     actions: [
