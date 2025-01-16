@@ -1,0 +1,45 @@
+graph TD
+    subgraph UI["User Interface Layer"]
+        SearchField[Search Input Field]
+        ResultsView[Results Display]
+        AnimatedBG[Animated Background]
+        LoadingState[Loading Indicators]
+    end
+
+    subgraph BL["Business Logic Layer"]
+        Controller[Controller]
+        CacheManager[Cache Manager]
+        ErrorHandler[Error Handler]
+        NetworkManager[Network Manager]
+    end
+
+    subgraph Data["Data Layer"]
+        LocalDB[(Local Database)]
+        ExternalAPI[Dictionary API]
+    end
+
+    %% UI Layer Connections
+    SearchField -->|Input Word| Controller
+    Controller -->|Update UI| ResultsView
+    Controller -->|Toggle| LoadingState
+
+    %% Business Logic Connections
+    Controller -->|Cache Check| CacheManager
+    CacheManager -->|Read/Write| LocalDB
+    Controller -->|API Request| NetworkManager
+    NetworkManager -->|HTTP Request| ExternalAPI
+    ExternalAPI -->|JSON Response| NetworkManager
+    NetworkManager -->|Parsed Data| Controller
+    
+    %% Error Handling
+    NetworkManager -->|Network Errors| ErrorHandler
+    ErrorHandler -->|Error Messages| ResultsView
+
+    %% Styling
+    classDef uiClass fill:#e1f5fe,stroke:#01579b
+    classDef logicClass fill:#fff3e0,stroke:#ff6f00
+    classDef dataClass fill:#e8f5e9,stroke:#2e7d32
+
+    class SearchField,ResultsView,AnimatedBG,LoadingState uiClass
+    class Controller,CacheManager,ErrorHandler,NetworkManager logicClass
+    class LocalDB,ExternalAPI dataClass
