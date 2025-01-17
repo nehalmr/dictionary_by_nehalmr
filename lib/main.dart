@@ -63,7 +63,8 @@ class DictionaryHome extends StatelessWidget {
                     content: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('Created by Mr. Nehal Mahendra Rane'),
+                        Text('Created by Mr. Nehal Mahendra Rane,\n Computer Engineering Department, ZCER, Pune, India.',
+                          textAlign: TextAlign.center),
                         SizedBox(height: 10),
                         Text('Connect with me:'),
                         TextButton(
